@@ -2,14 +2,12 @@ import React, { useState, useEffect } from 'react';
 import axios from 'axios';
 import { MapContainer, TileLayer, Marker, Polyline } from 'react-leaflet';
 import 'leaflet/dist/leaflet.css';
-import { useNavigate } from 'react-router-dom';
 import L from 'leaflet';
 
 const redIcon = new L.Icon({
   iconUrl: 'https://raw.githubusercontent.com/pointhi/leaflet-color-markers/master/img/marker-icon-red.png',
   iconSize: [25, 41],
   iconAnchor: [12, 41],
-  popupAnchor: [1, -34]
 });
 
 export default function DashboardUser() {
@@ -19,10 +17,10 @@ export default function DashboardUser() {
   const [userRequest, setUserRequest] = useState(null);
   const [mobile, setMobile] = useState(localStorage.getItem('userMobile') || '');
   const userName = localStorage.getItem('userName') || 'User';
-  const navigate = useNavigate();
 
   useEffect(() => {
     fetchRequest();
+    // eslint-disable-next-line
   }, []);
 
   const fetchRequest = async () => {
@@ -107,17 +105,14 @@ export default function DashboardUser() {
     <div className="p-6 max-w-xl mx-auto">
       <h2 className="text-xl font-bold mb-4">Welcome, {userName}</h2>
 
-      <div className="mb-4" >
-        <input 
+      <div className="mb-4">
+        <input
           type="tel"
           placeholder="Enter your Mobile Number"
           value={mobile}
           onChange={(e) => setMobile(e.target.value)}
-          style={{width:'600px',border:'2px solid black',background: 'linear-gradient(to right,rgb(207, 213, 228),rgb(246, 245, 245))'}}
           className="w-full px-3 py-2 border border-gray-300 rounded"
         />
-        <br>
-        </br>
         <button
           onClick={handleMobileSave}
           className="mt-2 bg-green-600 text-white py-1 px-4 rounded hover:bg-green-700"
@@ -127,8 +122,7 @@ export default function DashboardUser() {
       </div>
 
       {!submitted && (
-        <form onSubmit={requestHelp} className="space-y-4"  style={{background: 'linear-gradient(to right,rgb(194, 205, 239),rgb(237, 165, 169))'}}>
-            <h2 style={{marginLeft:'180px'}}>Choose Service</h2>
+        <form onSubmit={requestHelp} className="space-y-4">
           <select
             className="w-full px-4 py-2 border rounded"
             onChange={(e) => setService(e.target.value)}
@@ -140,9 +134,9 @@ export default function DashboardUser() {
             <option value="Carpentry">Carpentry</option>
             <option value="Cleaning">Cleaning</option>
           </select>
-            <h2 style={{marginLeft:'200px'}}>Address</h2>
+
           <textarea
-            placeholder="Your Address..."
+            placeholder="Describe your issue..."
             onChange={(e) => setDesc(e.target.value)}
             className="w-full px-4 py-2 border rounded"
             required
@@ -164,7 +158,7 @@ export default function DashboardUser() {
       {userRequest && userRequest.status === 'accepted' && (
         <>
           <div className="bg-blue-100 p-4 mb-4 rounded border border-blue-300 text-blue-900">
-            <strong>{userRequest.acceptedBy}</strong> accepted your <strong>{userRequest.service}</strong> request and he will reach soon.
+            <strong>{userRequest.acceptedBy}</strong> accepted your <strong>{userRequest.service}</strong> request and will reach soon.
           </div>
 
           {userRequest.userLocation && userRequest.workerLocation && (

@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
@@ -68,3 +69,27 @@ This section has moved here: [https://facebook.github.io/create-react-app/docs/d
 ### `npm run build` fails to minify
 
 This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+=======
+# Real-Time-Service-Request-System
+HouseHelp is a full-stack web application that bridges users needing household services with nearby available workers. Users can request services like plumbing, electrical work, or cleaning. The system tracks real-time request acceptance and location between users and workers, helping ensure fast and secure service delivery.
+
+Key Features
+👤 User Login and submit one active service request at a time.
+👷 Worker Login to view open requests and accept jobs.
+✅ Once accepted, the user sees the worker’s name and live map showing:
+📍 User and Worker locations
+📏 Distance in kilometers
+🗺️ Interactive map using Leaflet.
+📱 Mobile number saving for easy contact.
+🔁 "Reached" button resets service state for future requests.
+
+Tech Stack
+ Frontend: React, Tailwind CSS, React Router, Leaflet (for map)
+ Backend: Node.js, Express
+ Database: MongoDB (via Mongoose)
+ Map Services: OpenStreetMap via Leaflet
+ Geolocation: HTML5 Geolocation API
+
+ Authors
+Jayanth K (Full Stack Developer)
+>>>>>>> be2a090be74f3a677a0e7b6cd1a3f0f7726d56c6

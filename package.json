@@ -12,6 +12,7 @@
     "express": "^5.1.0",
     "firebase": "^9.23.0",
     "leaflet": "^1.9.4",
+    "leaflet-routing-machine": "^3.2.12",
     "mongoose": "^8.16.1",
     "react": "^19.1.0",
     "react-dom": "^19.1.0",

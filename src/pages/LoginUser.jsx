@@ -23,7 +23,7 @@ export default function LoginUser({ onLogin }) {
       className="login-background"
     
     >
-      <form onSubmit={handleLogin} className="login-form" style={{background: 'linear-gradient(to right,rgb(152, 177, 249),rgb(240, 134, 139))'}}>
+      <form onSubmit={handleLogin} className="login-form" style={{background: 'linear-gradient(to right,rgb(174, 173, 144),rgb(241, 193, 116))'}}>
         <h2 className="login-title">USER LOGIN</h2>
         <input
           type="text"
@@ -33,6 +33,8 @@ export default function LoginUser({ onLogin }) {
           className="login-input"
           required
         />
+        <br></br>
+        <br></br>
         <input
           type="password"
           placeholder="Enter Password"
@@ -41,6 +43,8 @@ export default function LoginUser({ onLogin }) {
           className="login-input"
           required
         />
+        <br></br>
+        <br></br>
         <button type="submit" className="login-button">Login</button>
       </form>
     </div>

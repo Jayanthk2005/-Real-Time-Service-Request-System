@@ -53,8 +53,8 @@ export default function App() {
           </Routes>
         </main>
 
-        <footer className="footer" style={{background: 'linear-gradient(to right,rgb(35, 32, 32),rgb(84, 78, 74))'}}>
-          <p>&copy; 2025 HouseHelp Hub</p>
+        <footer className="footer" style={{background: 'linear-gradient(to right,rgb(232, 179, 81),rgb(56, 25, 3))'}}>
+          <p style={{color:'white'}}>&copy; 2025 HouseHelp Hub</p>
         </footer>
       </Router>
     </div>
